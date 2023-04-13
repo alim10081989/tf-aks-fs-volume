@@ -28,3 +28,8 @@ output "storage_account_fileshare_name" {
   description = "Storage Account File Share Name : "
   value       = azurerm_storage_share.aks-fshare.name
 }
+
+output "container_registry_name" {
+  description = "Container Registry Name : "
+  value       = azurerm_container_registry.demoacr.name
+}
