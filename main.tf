@@ -32,13 +32,6 @@ resource "azurerm_log_analytics_solution" "demo_lgas" {
   }
 }
 
-resource "azurerm_container_registry" "demoacr" {
-  name                = "thghtwrksreg134"
-  resource_group_name = azurerm_resource_group.rg.name
-  location            = azurerm_resource_group.rg.location
-  sku                 = "Standard"
-}
-
 resource "azurerm_kubernetes_cluster" "k8s" {
   location            = azurerm_resource_group.rg.location
   name                = var.cluster_name
